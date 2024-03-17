@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Live Streaming Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Object Detection" />
+    <script>
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
+
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+    <!-- Custom Theme files -->
+    <link
+      href="{{ url_for('static', path='css/bootstrap.css') }}"
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="{{ url_for('static', path='css/style.css') }}"
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- font-awesome icons -->
+    <link
+      href="{{ url_for('static', path='css/font-awesome.min.css') }}"
+      rel="stylesheet"
+    />
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+      rel="stylesheet"
+    />
+    <!-- //online-fonts -->
+  </head>
+
+  <body>
+    <section class="main-banner" id="home">
+      <div class="layer">
+        <div class="header-wthree-top-w3layouts text-right">
+          <ul class="list-unstyled apps-lists text-right">
+            <li>
+              <a href="/object-detection/" class="btn">Try App</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="baner-info-w3layouts" style= "padding-top: 8em">
+            <h3 class="mx-auto mt-md-2 mt-2 adjusted-h3" style=" padding-bottom: 1em">Designed to empower visually impaired individuals with enhanced safety and independence during their travels. 
+            </h3>
+            <h6 class = "mx-auto mt-md-4 mt-3 text-left">
+              Key Features:
+            </h6>
+            <h6 class="mx-auto mt-md-4 mt-3 text-left">
+              Obstacle Detection and Safe Pathfinding:  utilizes the smartphone's camera to scan the environment in front of the user continually. It identifies obstacles such as walls, steps, or objects obstructing the path and provides real-time audio feedback to guide the user around these obstacles. 
+            </h6>
+            <h6 class="mx-auto mt-md-4 mt-3 text-left">
+              Text-to-Audio Message Reader: The application can recognize and convert text from signs, boards, and notices into audio, which is then read aloud to the user. This feature helps users access vital information during their journeys, such as street signs, bus schedules, or store names.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //banner -->
+    <!--/ banner-bottom-w3ls -->
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Live Streaming Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Object Detection" />
+    <script>
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
+
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+    <!-- Custom Theme files -->
+    <link
+      href="{{ url_for('static', path='css/bootstrap.css') }}"
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="{{ url_for('static', path='css/style.css') }}"
+      type="text/css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- font-awesome icons -->
+    <link
+      href="{{ url_for('static', path='css/font-awesome.min.css') }}"
+      rel="stylesheet"
+    />
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+      rel="stylesheet"
+    />
+    <!-- //online-fonts -->
+  </head>
+
+  <body>
+    <section class="main-banner" id="home">
+      <div class="layer">
+        <div class="header-wthree-top-w3layouts text-right">
+          <ul class="list-unstyled apps-lists text-right">
+            <li>
+              <a href="/object-detection/" class="btn">Detect Object</a>
+            </li>
+            <li>
+              <a href="/depth/" class="btn">Depth</a>
+            </li>
+            <li>
+              <a href="/closest-object-detection/" class="btn">Detect closest Object</a>
+            </li>
+            <li>
+              <a href="/blind/" class="btn">Blind</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+  <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+          <h6 style="padding-top: 1em; padding-bottom: 1em">
+              <a href="/">Back to Homepage</a>
+          </h6>
+          {% if dtype == "object" %}
+          <h3 class="mt" style="padding-top: 1em; padding-bottom: 1em; color: white">
+            Live Streaming Object Detection
+          </h3>
+          <img src="{{ url_for('video_feed') }}" width="100%" />
+          {% elif dtype == 'blind' %}
+          <h3 class="mt" style="padding-top: 1em; padding-bottom: 1em; color: white">
+            Live Streaming for Assisting Blind
+          </h3>
+          <img src="{{ url_for('video_for_blind') }}" width="100%" />
+          {% elif dtype == 'depth' %}
+          <h3 class="mt" style="padding-top: 1em; padding-bottom: 1em; color: white">
+            Live Streaming Depth Detection
+          </h3>
+          <img src="{{ url_for('video_for_depth') }}" width="100%" />
+          {% else %}
+          <h3 class="mt" style="padding-top: 1em; padding-bottom: 1em; color: white">
+            Live Streaming Closest Object Detection
+          </h3>
+          <img src="{{ url_for('closest_video') }}" width="100%" />
+          {% endif %}
+      </div>
+  </div>
+</div>
+      </div>
+    </section>
+    <!-- //banner -->
+    <!--/ banner-bottom-w3ls -->
+  </body>
+</html>
