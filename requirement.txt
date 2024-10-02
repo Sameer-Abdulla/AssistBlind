@@ -9,3 +9,4 @@ tensorflow
 google-cloud-vision
 ultralytics
 supervision
+pyttsx3
