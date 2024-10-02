@@ -7,3 +7,5 @@ streamlit
 uvicorn
 tensorflow
 google-cloud-vision
+ultralytics==8.0.32
+supervision==0.2.1
